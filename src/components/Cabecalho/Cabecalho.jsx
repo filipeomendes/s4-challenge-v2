@@ -2,7 +2,7 @@ export default function Cabecalho(){
     return(
         <header>
             <div>
-                <Link href="/"><Image src="/logotipo1.svg" alt="" width={30} height={30}></Image></Link>
+                <Link href="/"><Image src="/logotipo1.svg" alt="Logotipo Porto Seguro-SOS" width={30} height={30}></Image></Link>
             </div>
             <div>
                 <nav>
