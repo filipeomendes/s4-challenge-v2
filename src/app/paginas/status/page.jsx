@@ -11,7 +11,7 @@ export default function Status() {
             <h1>Status</h1>
         </div>
         <div>
-            <Image src="/status-foto" alt=""></Image>
+            <Image src="/status-foto.svg" alt="ilustração do status da solicitação de guincho (guincho a caminho)"></Image>
         </div>
       </main>
     )
