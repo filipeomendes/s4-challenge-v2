@@ -6,10 +6,10 @@ import { Children } from "react";
 export default function Cabecalho(){
     return(
         <header>
-            <div>
+            <div className="logo-porto">
                 <Link href="/"><Image src="/logotipo1.svg" alt="Logotipo Porto Seguro-SOS" width={30} height={30}></Image></Link>
             </div>
-            <div>
+            <div className="menu">
                 <nav>
                     <Link href="/maps">Solicitação</Link>
                     <span> | </span>
