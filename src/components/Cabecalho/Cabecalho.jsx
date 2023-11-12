@@ -11,7 +11,7 @@ export default function Cabecalho(){
             </div>
             <div className="menu">
                 <nav>
-                    <Link href="/maps">Solicitação</Link>
+                    <Link href="/paginas/solicitacao">Solicitação</Link>
                     <span> | </span>
                     <Link href="/paginas/sobre">Sobre</Link>
                     <span> | </span>
