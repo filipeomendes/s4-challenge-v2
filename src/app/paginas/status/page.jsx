@@ -11,7 +11,7 @@ export default function Status() {
             <h1>Status</h1>
         </div>
         <div>
-            <Image src="" alt=""></Image>
+            <Image src="/status-foto" alt=""></Image>
         </div>
       </main>
     )
