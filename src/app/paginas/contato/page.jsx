@@ -4,7 +4,7 @@ export const metadata = {
 
 export default function Contato() {
     return (
-      <main>
+      <main className="contato">
         <div className="titulo">
           <h1>Contato</h1>
         </div>
