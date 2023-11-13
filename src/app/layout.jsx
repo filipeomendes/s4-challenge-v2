@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google'
-import './globals.css'
+import './globals.scss'
 import Cabecalho from '@/components/Cabecalho/Cabecalho'
 import Rodape from '@/components/Rodape/Rodape'
 

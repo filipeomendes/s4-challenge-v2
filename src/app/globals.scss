@@ -34,11 +34,11 @@ header {
             text-decoration: none;
             color: #0046C0;
             padding: 0.5rem 2rem;
-            font-weight: 800;
+            font-weight: 300;
             font-size: 1.2rem;
 
             &:hover {
-                text-decoration: underline;
+                font-weight: 800;
             }
         }
     }
@@ -127,3 +127,63 @@ main {
         }
     }
 }
+
+.conteudo-sobre {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 10rem 5rem 10rem;
+    align-items: center;
+    justify-content: left;
+  
+    p {
+      margin: 1rem;
+    }
+  }
+  
+  h3 {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+  }
+
+    
+  .status-foto {
+    display: flex;
+    justify-content: center;
+    margin: 10rem 0rem 10rem 0rem;
+  
+    img {
+      max-width: 40rem;
+    }
+  }
+  
+  .main-mapa {
+    .img-mapa {
+      position: relative;
+      display: inline-block;
+  
+      img {
+        max-width: 100%;
+        width: 3000px;
+        height: auto;
+        margin-bottom: 10rem;
+      }
+  
+      .botao {
+        .botao-seguinte {
+          position: absolute;
+          right: 1rem;
+          bottom: 30px;
+          margin: 20px;
+        }
+  
+        .botao-voltar {
+          position: absolute;
+          left: 1rem;
+          bottom: 30px;
+          margin: 20px;
+        }
+      }
+    }
+  }
+  
