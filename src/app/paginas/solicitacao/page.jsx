@@ -72,7 +72,7 @@ export default function Solicitacao(){
           </div>
           <div>
             <Link href="/">
-              <button className="botao-voltar">Voltar</button>
+              <button type="button" className="botao-voltar">Voltar</button>
             </Link>
           </div>
           <div>

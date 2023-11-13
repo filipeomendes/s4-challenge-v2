@@ -187,3 +187,181 @@ main {
     }
   }
   
+  .login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .texto-login {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    margin-left: 10rem;
+  
+    .logo-porto-login {
+      position: absolute;
+      top: 2rem;
+      left: 10rem;
+      margin-bottom: 15rem;
+    }
+  
+    .titulo-login {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
+  
+    .subtitulo-login {
+      margin-bottom: 3rem;
+      color: rgb(107, 107, 107);
+    }
+  
+    .form {
+      max-width: 600px;
+      width: 600px;
+      padding: 20px;
+      background-color: #f3f3f3;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+      .form-control {
+        margin-bottom: 3rem;
+  
+        label {
+          display: block;
+          margin-bottom: 1rem;
+          font-weight: bold;
+        }
+  
+        input {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+        }
+      }
+    }
+  
+    .paragrafo-login {
+      p {
+        text-align: center;
+        margin-top: 2rem;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  
+    .botao {
+      text-align: center;
+  
+      button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        padding: 10px 20px;
+        cursor: pointer;
+        width: 560px;
+        font-weight: bold;
+  
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  
+    @media (min-width: 1080px) {
+      .titulo {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  
+  .foto-guincho {
+    height: 100vh;
+    background-color: #183d7d;
+    align-items: center;
+  
+    .div-foto-guincho img {
+      display: flex;
+      padding: 10rem 10rem 0 3rem;
+      width: 50rem;
+      margin-right: 10rem;
+      margin-left: 5rem;
+      margin-left: -10rem;
+    }
+  }
+  
+
+  .solicitacaoo {
+    .secao-form {
+      display: flex;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      margin-bottom: 15rem;
+      justify-content: center;
+  
+      .formulario-solicitao {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+  
+        div {
+          flex: 0 0 calc(50% - 10px);
+          margin-bottom: 10px;
+          margin-right: 10px;
+  
+          &:last-child {
+            margin-right: 0;
+          }
+  
+          label {
+            display: none;
+          }
+  
+          input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  
+  
+    .botao {
+      text-align: center;
+  
+      &-voltar {
+        position: absolute;
+        left: 1rem;
+        bottom: 30px;
+        margin: 20px
+      }
+  
+      &-seguinte {
+        position: absolute;
+        right: 1rem;
+        bottom: 30px;
+        margin: 20px;
+      }
+    }
+  
+    .error-notification {
+      background-color: #f44336;
+      color: white;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+  }
+   
