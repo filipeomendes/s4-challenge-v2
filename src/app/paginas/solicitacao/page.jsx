@@ -28,12 +28,12 @@ export default function Solicitacao(){
   };
 
   return (
-    <main>
-      <section>
+    <main className='solicitacaoo'>
+      <section className="titulo">
         <h1>Solicitar Resgate do Veículo</h1>
       </section>
-      <section>
-        <form onSubmit={handleSubmit} id="form-solicitacao">
+      <section className="secao-form">
+        <form onSubmit={handleSubmit} id="form-solicitacao" className="formulario-solicitao">
           <div>
             <label htmlFor="modelo">Modelo do Veículo:</label>
             <input type="text" id="modelo" name="modelo" value={formData.modelo} onChange={handleChange}placeholder="*Modelo do veículo"/>
@@ -72,11 +72,11 @@ export default function Solicitacao(){
           </div>
           <div>
             <Link href="/">
-              <button>Voltar</button>
+              <button className="botao-voltar">Voltar</button>
             </Link>
           </div>
           <div>
-            <button type="submit">Solicitar</button>
+            <button type="submit" className="botao-seguinte">Solicitar</button>
           </div>
         </form>
       </section>
