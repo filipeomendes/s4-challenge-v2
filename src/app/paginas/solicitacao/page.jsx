@@ -1,25 +1,85 @@
-export const metadata = {
-    title: 'Contato',
-}
+'use client';
+import Link from "next/link";
+import { useState } from "react";
 
-export default function Contato() {
-    return (
-      <main className="contato">
-        <div className="titulo">
-          <h1>Contato</h1>
-        </div>
-        <div className="membros">
-        <h2>Fernando Paparelli Aracena - rm551022</h2>
-          <p>rm551022@fiap.com</p>
-          <h2>Filipe de Oliveira Mendes - rm98959</h2>
-          <p>rm98959@fiap.com.br</p>
-          <h2>Miron Gonçalves Marins - rm551801</h2>
-          <p>rm551801@fiap.com.br</p>
-          <h2>Paulo Henrique de Andrade Junior - rm99714 </h2>
-          <p>rm99714@fiap.com.br</p>
-          <h2>Vinicius Pedro de Souza - rm550907</h2>
-          <p>rm550907@fiap.com.br</p>
-        </div>
-      </main>
-    )
-  }
+
+export default function Solicitacao(){
+
+  const [formData, setFormData] = useState({
+    modelo: '', carga: '', situacao: '', apolice: '', cep: '', comprimento: '', altura: '', peso: '', obs: '',
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const isFormValid = Object.values(formData).every((value) => value.trim() !== '');
+    if (isFormValid) {
+      window.location.href = '/status';
+    } else {
+      alert('Por favor, preencha todos os campos.');
+    }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  return (
+    <main>
+      <section>
+        <h1>Solicitar Resgate do Veículo</h1>
+      </section>
+      <section>
+        <form onSubmit={handleSubmit} id="form-solicitacao">
+          <div>
+            <label htmlFor="modelo">Modelo do Veículo:</label>
+            <input type="text" id="modelo" name="modelo" value={formData.modelo} onChange={handleChange}placeholder="*Modelo do veículo"/>
+          </div>
+          <div>
+            <label htmlFor="carga">Peso da Carga:</label>
+            <input type="text" id="carga" name="carga" value={formData.carga} onChange={handleChange} placeholder="*Peso da carga"/>
+          </div>
+          <div>
+            <label htmlFor="situacao">Situação do Resgate:</label>
+            <input type="text" id="situacao" name="situacao" value={formData.situacao} onChange={handleChange} placeholder="*Situação do resgate"/>
+          </div>
+          <div>
+            <label htmlFor="apolice">Número da Apólice:</label>
+            <input type="text" id="apolice" name="apolice" value={formData.apolice} onChange={handleChange} placeholder="*Número da apólice"/>
+          </div>
+          <div>
+            <label htmlFor="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" value={formData.cep} onChange={handleChange} placeholder="*CEP" />
+          </div>
+          <div>
+            <label htmlFor="comprimento">Comprimento do Veículo:</label>
+            <input type="text" id="comprimento" name="comprimento" value={formData.comprimento} onChange={handleChange} placeholder="*Comprimento do veículo" />
+          </div>
+          <div>
+            <label htmlFor="altura">Altura do Veículo:</label>
+            <input type="text" id="altura" name="altura" value={formData.altura} onChange={handleChange} placeholder="*Altura do veículo" />
+          </div>
+          <div>
+            <label htmlFor="peso">Peso do Veículo:</label>
+            <input type="text" id="peso" name="peso" value={formData.peso} onChange={handleChange} placeholder="*Peso do veículo" />
+          </div>
+          <div>
+            <label htmlFor="obs">Observações:</label>
+            <input type="text" id="obs" name="obs" value={formData.obs} onChange={handleChange} placeholder="*Observações" />
+          </div>
+          <div>
+            <Link href="/">
+              <button>Voltar</button>
+            </Link>
+          </div>
+          <div>
+            <button type="submit">Solicitar</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  );
+}
