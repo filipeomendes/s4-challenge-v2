@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+main{
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 3rem;
+    background-color: #f7f7f7;
+    color: #0046C0;
+
+    .logo-porto {
+        img {
+            display: flex;
+            align-items: center;
+            width: 8rem;
+        }
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        a {
+            text-decoration: none;
+            color: #0046C0;
+            padding: 0.5rem 2rem;
+            font-weight: 800;
+            font-size: 1.2rem;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: #183D7D;
+    color: #fff;
+    padding: 2rem 0rem 2rem 0rem;
+
+    .conteudo-rodape {
+        .redes-sociais-logos {
+            .redes-sociais-nav {
+                a {
+                    img {
+                        max-width: 3rem;
+                        height: auto;
+                        margin: 0rem 2rem 1rem 2rem;
+                    }
+
+                    &:not(:last-child) {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+main {
+    .contato{
+        h1 {
+            align-items: center;
+        }
+    }
+
+    .membros {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        h2 {
+            padding-top: 3rem;
+        }
+
+        p {
+            margin-top: 0.8rem;
+        }
+    }
+}
+
+.main-mapa {
+    .img-mapa {
+        position: relative;
+        display: inline-block;
+
+        Image {
+            max-width: 100%;
+            width: 3000px;
+            height: auto;
+            margin-bottom: 10rem;
+        }
+
+        .botao {
+            .botao-seguinte {
+                position: absolute;
+                right: 1rem;
+                bottom: 30px;
+                margin: 20px;
+            }
+
+            .botao-voltar {
+                position: absolute;
+                left: 1rem;
+                bottom: 30px;
+                margin: 20px;
+            }
+        }
+    }
+}
