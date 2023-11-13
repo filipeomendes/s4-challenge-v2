@@ -13,7 +13,7 @@ export default function Solicitacao(){
     e.preventDefault();
     const isFormValid = Object.values(formData).every((value) => value.trim() !== '');
     if (isFormValid) {
-      window.location.href = '/status';
+      window.location.href = '/paginas/status';
     } else {
       alert('Por favor, preencha todos os campos.');
     }
