@@ -9,6 +9,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 @layer components{
     header {
         display: flex;
@@ -17,30 +19,28 @@
         padding: 0rem 3rem;
         background-color: #f7f7f7;
         color: #0046C0;
+        height: 3rem;
     
-        .logo-porto {
-            img {
+        .logo-porto{
                 display: flex;
                 align-items: center;
-                width: 8rem;
-            }
+                width: 29rem;
         }
     
         .menu {
             display: flex;
+            gap: 2rem;
             align-items: center;
-    
-            a {
-                text-decoration: none;
-                color: #0046C0;
-                padding: 0.5rem 2rem;
-                font-weight: 800;
-                font-size: 1.2rem;
-    
+            text-decoration: none;
+            color: #0046C0;
+            padding: 0.5rem 2rem;
+            font-weight: 300;
+            font-size: 1.2rem;
                 &:hover {
                     text-decoration: underline;
+                    font-weight: 800;
                 }
-            }
+            
         }
     }    
 }
