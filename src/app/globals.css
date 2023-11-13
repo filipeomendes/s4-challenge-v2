@@ -5,42 +5,64 @@
     font-size: 100%;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 3rem;
+    background-color: #f7f7f7;
+    color: #0046C0;
 
-
-
-@layer components{
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0rem 3rem;
-        background-color: #f7f7f7;
-        color: #0046C0;
-        height: 3rem;
-    
-        .logo-porto{
-                display: flex;
-                align-items: center;
-                width: 29rem;
-        }
-    
-        .menu {
+    .logo-porto {
+        img {
             display: flex;
-            gap: 2rem;
             align-items: center;
+            width: 8rem;
+        }
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+
+        a {
             text-decoration: none;
             color: #0046C0;
             padding: 0.5rem 2rem;
-            font-weight: 300;
+            font-weight: 800;
             font-size: 1.2rem;
-                &:hover {
-                    text-decoration: underline;
-                    font-weight: 800;
-                }
-            
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
-    }    
+    }
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: #183D7D;
+    color: #fff;
+    padding: 2rem 0rem 2rem 0rem;
+
+    .conteudo-rodape {
+        .redes-sociais-logos {
+            .redes-sociais-nav {
+                a {
+                    img {
+                        max-width: 3rem;
+                        height: auto;
+                        margin: 0rem 2rem 1rem 2rem;
+                    }
+
+                    &:not(:last-child) {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
 }
