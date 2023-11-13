@@ -11,13 +11,13 @@ export default function Cabecalho(){
             </div>
             <div className="menu">
                 <nav>
-                    <Link href="/maps">Solicitação</Link>
+                    <Link href="/paginas/solicitacao">Solicitação</Link>
                     <span> | </span>
                     <Link href="/paginas/sobre">Sobre</Link>
                     <span> | </span>
                     <Link href="/paginas/contato">Contato</Link>
                 </nav>
-                <Link href="/" title="Sair da Conta"><Image src="/usuario.svg" alt="" width={50} height={50}></Image></Link>
+                <Link href="/login" title="Sair da Conta"><Image src="/usuario.svg" alt="" width={50} height={50}></Image></Link>
             </div>
         </header>
     )
