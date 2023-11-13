@@ -97,3 +97,33 @@ main {
         }
     }
 }
+
+.main-mapa {
+    .img-mapa {
+        position: relative;
+        display: inline-block;
+
+        Image {
+            max-width: 100%;
+            width: 3000px;
+            height: auto;
+            margin-bottom: 10rem;
+        }
+
+        .botao {
+            .botao-seguinte {
+                position: absolute;
+                right: 1rem;
+                bottom: 30px;
+                margin: 20px;
+            }
+
+            .botao-voltar {
+                position: absolute;
+                left: 1rem;
+                bottom: 30px;
+                margin: 20px;
+            }
+        }
+    }
+}
