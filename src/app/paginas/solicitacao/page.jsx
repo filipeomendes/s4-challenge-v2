@@ -1,9 +1,38 @@
 'use client';
 import Link from "next/link";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 
-export default function Solicitacao(){
+export default function Solicitacao({params}){
+
+  const router = useRouter();
+
+  const [msgstatus, setMsgStatus] = useState("");
+  const [classLoginMsg, setClassLoginMsg] = useState("");
+
+  const [solicitacao, setSolicitacao] = useState({
+    "info":"solicitacao",
+    "modelo":"",
+    "carga":"",
+    "situacao":"",
+    "apolice":"",
+    "cep":"",
+    "comprimento":"",
+    "altura":"",
+    "peso":"",
+    "obs":""
+  });
+
+  useEffect(() => {
+    if(msgstatus == "Cadastro realizado com SUCESSO!"){
+       setClassLoginMsg("login-suc");
+     }else if(msgstatus == "OCORREU UM ERRO!"){
+         setClassLoginMsg("login-err");
+     }else{
+         setClassLoginMsg("login");
+     }
+ }, [msgstatus]);
 
   const [formData, setFormData] = useState({
     modelo: '', carga: '', situacao: '', apolice: '', cep: '', comprimento: '', altura: '', peso: '', obs: '',
@@ -11,12 +40,36 @@ export default function Solicitacao(){
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    const response = fetch("http://localhost:3000/api/solicitacao",{
+                method: "POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body:  JSON.stringify(usuario)
+            });
+            if(response.ok){
+              const user = response.json();
+
+              if(user){
+                  setMsgStatus("Cadastro realizado com SUCESSO!");
+                  setTimeout(()=>{
+                      setMsgStatus("");
+                      router.push("/");
+                  },5000);
+              }else{
+                  setMsgStatus("OCORREU UM ERRO!");
+
+              }
+          }
+
     const isFormValid = Object.values(formData).every((value) => value.trim() !== '');
     if (isFormValid) {
       window.location.href = '/paginas/status';
     } else {
       alert('Por favor, preencha todos os campos.');
     }
+
   };
 
   const handleChange = (e) => {
@@ -26,6 +79,7 @@ export default function Solicitacao(){
       [name]: value,
     });
   };
+  
 
   return (
     <main className='solicitacaoo'>

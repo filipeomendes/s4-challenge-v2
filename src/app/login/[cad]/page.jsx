@@ -5,13 +5,9 @@ import { useEffect, useState } from "react";
 
 export default function CadUser({params}) {
 
-    //Utilizando o redirecionamento quando estamos no cliente:
     const router = useRouter();
-
     const [msgstatus, setMsgStatus] = useState("");
     const [classLoginMsg, setClassLoginMsg] = useState("");
-
-    //Criando um useState para comportar o usuário:
     const [usuario, setUsuario] = useState({
         "info":"cadastro",
         "nome":"",
@@ -29,15 +25,12 @@ export default function CadUser({params}) {
         }
     }, [msgstatus]);
     
-    //Função de preenchimento do FORM...
     const handleChange = (e)=>{
-        //Destructuring
+
         const{name, value} = e.target;
-        //Prenchendo o campo, utilizando o useState com SPREAD + OnChange:
         setUsuario({...usuario,[name]:value});
     }
 
-    //Função de validação e ENVIO dos dados.
     const handleSubmit = async (e)=>{
         e.preventDefault();
         
@@ -83,11 +76,11 @@ export default function CadUser({params}) {
             <h2 className={classLoginMsg}>{msgstatus}</h2>
 
         <div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="form">
                 <fieldset>
 
                     <legend>CADASTRO</legend>
-                    <div>
+                    <div className="form-control">
                         <label htmlFor="idNome">NOME:</label>
                         <input type="text" name="nome" id="idNome" placeholder="Digite o seu NOME:" value={usuario.nome} onChange={handleChange}/>
                     </div>

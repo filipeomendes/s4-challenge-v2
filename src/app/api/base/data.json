@@ -1,1 +1,8 @@
-{"usuarios":[{"id":1,"name":"Urielle Felix","email":"challenge@fiap.com.br","senha":"porto123"},{"id":2,"nome":"","email":"","senha":""}]}
+{
+    "usuarios": [{
+        "id": 1,
+        "name": "Urielle Felix",
+        "email": "challenge@fiap.com.br",
+        "senha": "porto123"
+    }]
+}

@@ -17,7 +17,7 @@ export default function Cabecalho() {
                     <span> | </span>
                     <Link href="/paginas/contato">Contato</Link>
                 </nav>
-                <Link href="/login" title="Sair da Conta"><Image src="/usuario.svg" alt="" width={30} height={30}></Image></Link>
+                <Link href="/login" title="Sair da Conta"><Image src="/usuario.svg" alt="" width={60} height={60}></Image></Link>
             </div>
         </header>
     );

@@ -218,8 +218,8 @@ main {
     }
   
     .form {
-      max-width: 600px;
-      width: 600px;
+      max-width: 500px;
+      width: 500px;
       padding: 20px;
       background-color: #f3f3f3;
       border-radius: 5px;
@@ -235,7 +235,7 @@ main {
         }
   
         input {
-          width: 100%;
+          width: 30rem;
           padding: 10px;
           border: 1px solid #ccc;
           border-radius: 3px;
@@ -264,7 +264,7 @@ main {
         border-radius: 3px;
         padding: 10px 20px;
         cursor: pointer;
-        width: 560px;
+        width: 31rem;
         font-weight: bold;
   
         &:hover {
@@ -287,14 +287,14 @@ main {
     height: 100vh;
     background-color: #183d7d;
     align-items: center;
-  
+    max-width: 40rem;
+    
     .div-foto-guincho img {
       display: flex;
       padding: 10rem 10rem 0 3rem;
       width: 50rem;
       margin-right: 10rem;
-      margin-left: 5rem;
-      margin-left: -10rem;
+      margin-left: -25rem;
     }
   }
   
@@ -365,3 +365,30 @@ main {
     }
   }
    
+
+.error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; // Ajuste conforme necessário para o tamanho desejado
+
+  div {
+    text-align: center;
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #007bff; // Cor do link
+      margin-top: 0.5rem;
+
+      a {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}
