@@ -1,9 +1,14 @@
+import Rodape from "@/components/Rodape/Rodape"
+import Cabecalho from "@/components/Cabecalho/Cabecalho"
+
 export const metadata = {
     title: 'Contato',
 }
 
 export default function Contato() {
     return (
+      <>
+      <Cabecalho/>
       <main className="contato">
         <div className="titulo">
           <h1>Contato</h1>
@@ -21,5 +26,7 @@ export default function Contato() {
           <p>rm550907@fiap.com.br</p>
         </div>
       </main>
+      <Rodape/>
+      </>
     )
   }

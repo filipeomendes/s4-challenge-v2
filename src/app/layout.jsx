@@ -14,9 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body className={inter.className}>
-        <Cabecalho/>
-          {children}
-        <Rodape/>
+          {children}      
       </body>
     </html>
   )

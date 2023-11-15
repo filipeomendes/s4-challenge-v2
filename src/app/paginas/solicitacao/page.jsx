@@ -1,4 +1,6 @@
 'use client';
+import Cabecalho from "@/components/Cabecalho/Cabecalho";
+import Rodape from "@/components/Rodape/Rodape";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -82,6 +84,8 @@ export default function Solicitacao({params}){
   
 
   return (
+    <>
+    <Cabecalho/>
     <main className='solicitacaoo'>
       <section className="titulo">
         <h1>Solicitar Resgate do Veículo</h1>
@@ -130,10 +134,14 @@ export default function Solicitacao({params}){
             </Link>
           </div>
           <div>
-            <button type="submit" className="botao-seguinte">Solicitar</button>
+            <Link href="/paginas/status">
+              <button type="submit" className="botao-seguinte">Solicitar</button>
+            </Link>
           </div>
         </form>
       </section>
     </main>
+    <Rodape/>
+    </>
   );
 }

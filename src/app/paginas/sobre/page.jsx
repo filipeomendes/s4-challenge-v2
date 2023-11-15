@@ -1,9 +1,14 @@
+import Cabecalho from "@/components/Cabecalho/Cabecalho"
+import Rodape from "@/components/Rodape/Rodape"
+
 export const metadata = {
     title: 'Sobre',
 }
 
 export default function Sobre() {
     return (
+      <>
+      <Cabecalho/>
       <main>
         <div className="titulo">
           <h1>Sobre o Projeto</h1>
@@ -17,5 +22,7 @@ export default function Sobre() {
           <p>E para finalizar, será estruturado um banco de dados que amazenará informações do veículo através do CPF ou CNPJ do usuário, como placa, peso original do veículo, modelo, marca, cor, etc.</p>
         </div>
       </main>
+      <Rodape/>
+      </>
     )
   }

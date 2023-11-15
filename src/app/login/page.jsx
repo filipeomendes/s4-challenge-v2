@@ -76,9 +76,6 @@ export default function Login() {
               <Image src="/logotipo1.svg" alt="Logotipo Porto Seguro-SOS" width={320} height={320} />
             </Link>
           </div>
-          <div className='titulo-login'>
-            <h1>Login</h1>
-          </div>
           <div className="subtitulo-login">
             <h2>Solicite o resgate do seu veículo</h2>
           </div>
@@ -94,7 +91,7 @@ export default function Login() {
                 <input type="password" name="senha" id="idSenha" placeholder="Digite a sua SENHA: porto123" value={usuario.senha} onChange={handleChange} />
               </div>
               <div className="botao">
-                <button type="submit">LOGIN</button>
+                <button type="button">LOGIN</button>
               </div>
               <div className="paragrafo-login">
                 <p>

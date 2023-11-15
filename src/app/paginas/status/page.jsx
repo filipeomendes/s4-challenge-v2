@@ -1,3 +1,5 @@
+import Cabecalho from "@/components/Cabecalho/Cabecalho"
+import Rodape from "@/components/Rodape/Rodape"
 import Image from "next/image"
 
 export const metadata = {
@@ -6,6 +8,8 @@ export const metadata = {
 
 export default function Status() {
     return (
+      <>
+      <Cabecalho/>
       <main>
         <div className="titulo">
             <h1>Status</h1>
@@ -14,5 +18,7 @@ export default function Status() {
             <Image src="/status-foto.svg" alt="ilustração do status da solicitação de guincho (guincho a caminho)" width={320} height={320}></Image>
         </div>
       </main>
+      <Rodape/>
+      </>
     )
   }
